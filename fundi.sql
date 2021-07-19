@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2021 at 02:05 AM
+-- Generation Time: Jul 19, 2021 at 11:29 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -45,25 +45,12 @@ CREATE TABLE `chat` (
 CREATE TABLE `fundi` (
   `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone` varchar(12) NOT NULL,
-  `region` varchar(100) NOT NULL,
-  `district` varchar(100) NOT NULL,
-  `password` varchar(10) NOT NULL,
   `payMean` varchar(15) NOT NULL,
   `accNo` varchar(20) NOT NULL,
   `receipt` varchar(20) NOT NULL,
   `cartegory` varchar(20) NOT NULL,
   `img` varchar(100) NOT NULL DEFAULT 'assets/img/avatar.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `fundi`
---
-
-INSERT INTO `fundi` (`id`, `username`, `email`, `phone`, `region`, `district`, `password`, `payMean`, `accNo`, `receipt`, `cartegory`, `img`) VALUES
-(1, 'Peter Juma', 'peter@gmail.com', '1234567890', 'Mara', 'Tarime', '1234', 'PayPal', 'ACVFRG323213', 'TYR32323', 'Bomba', 'assets/img/avatar.png'),
-(2, 'pwagu pwagui', 'pwagu@gmail.com', '32321323', 'kagera', 'Muleba', '123', 'CRDB', 'GHT323213', 'sddsdsadsad', 'Gari', 'assets/img/avatar.png');
 
 -- --------------------------------------------------------
 
@@ -147,7 +134,7 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT for table `fundi`
 --
 ALTER TABLE `fundi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `member`

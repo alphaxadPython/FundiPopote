@@ -2,7 +2,7 @@
 
     session_start();
 
-    if(!isset($_SESSion['username'])){
+    if(!isset($_SESSION['username'])){
         ?>
         <script>
             window.location = 'index.php';
