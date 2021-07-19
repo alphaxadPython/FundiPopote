@@ -1,0 +1,36 @@
+<i class="fas fa-sms" style="font-size: 48px;"></i>message
+
+<i class="fas fa-id-card" style="font-size: 48px;"></i>contact book
+
+<i class="fas fa-radio" style="font-size: 48px;"></i>radio
+
+<i class="fas fa-satellite-dish" style="font-size: 48px;"></i>satelite
+
+<i class="fas fa-desktop" style="font-size: 48px;"></i> desktop
+
+<i class="fas fa-tshirt" style="font-size: 48px;"></i>shirt
+
+<i class="fas fa-refrigerator" style="font-size: 48px;"></i> fridge
+
+<i class="fas fa-key" style="font-size: 48px;"></i>key
+
+<i class="fas fa-camera" style="font-size: 48px;"></i>camera
+
+<i class="fas fa-car-battery" style="font-size: 48px;"></i>bbattery
+
+<i class="fas fa-bicycle" style="font-size: 48px;"></i>byyscle
+
+<i class="fas fa-motorcycle" style="font-size: 48px;"></i>motor cycle
+
+<i class="fas fa-meteor" style="font-size: 48px;"></i>welding
+
+<i class="fas fa-gas-pump" style="font-size: 48px;"></i>gas
+
+<i class="fab fa-telegram" style="font-size: 48px;"></i>send
+
+<i class="fas fa-toilet" style="font-size: 48px;"></i> choo
+
+
+
+
+
