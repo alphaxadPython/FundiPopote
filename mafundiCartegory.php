@@ -103,81 +103,29 @@
                           $cartegory = $_GET['cartegory'];
                           include "connection.php";
 
-                          $sql = "SELECT * FROM fundi JOIN member ON fundi.id = member.id WHERE member.cartegory ='$cartegory'";
+                          $sql = "SELECT * FROM  member  WHERE member.cartegory ='$cartegory'";
                           $check = mysqli_query($conn, $sql);
 
                           while($row = mysqli_fetch_assoc($check)){
 
                         ?>
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="<?php echo ucwords($row['img']); ?>" style="height: 240px; width: 300px;" class="img-fluid" alt="" />
-                                    <div class="social">
-                                        <a href="fundiCard.php?id=<?php echo $row['id']; ?>"><i class="fas fa-id-card"></i> Taarifa</a>
+                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                                <div class="member">
+                                    <div class="member-img">
+                                        <img src="<?php echo $row['img']; ?>" style="height: 240px; width: 300px;" class="img-fluid" alt="" />
+                                        <div class="social">
+                                            <a href="fundiCard.php?id=<?php echo $row['id']; ?>"><i class="fas fa-id-card"></i> Taarifa</a>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4><?php echo ucwords($row['username']); ?></h4>
+                                        <span>Fundi <?php echo ucwords($row['cartegory']); ?> - <?php echo ucwords($row['region']); ?></span>
                                     </div>
                                 </div>
-                                <div class="member-info">
-                                    <h4><?php echo ucwords($row['username']); ?></h4>
-                                    <span>Fundi <?php echo ucwords($row['cartegory']); ?> - <?php echo ucwords($row['region']); ?></span>
-                                </div>
                             </div>
-                        </div>
+
                     <?php } ?>
                 
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/fundi3.jpg" style="height: 240px;" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
-                                   
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Philbert MwakaTina</h4>
-                                <span>Fundi Gari - Kigambooni</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/mom.jpg" style="height: 240px;" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
-                                   
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Ramadan Juma</h4>
-                                <span>Fundi Mitambo - Kigambooni</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/fundi1.jpg" style="height: 240px;" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
-                                   
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Waizman Wise</h4>
-                                <span>Fundi Engine - Kigambooni</span>
-                            </div>
-                        </div>
-                    </div>
-                   
-
                   
                 </div>
             </div>

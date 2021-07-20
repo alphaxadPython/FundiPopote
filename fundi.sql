@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2021 at 11:29 PM
+-- Generation Time: Jul 19, 2021 at 11:46 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -65,16 +65,9 @@ CREATE TABLE `member` (
   `phone` varchar(12) NOT NULL,
   `region` varchar(100) NOT NULL,
   `district` varchar(100) NOT NULL,
-  `password` varchar(10) NOT NULL
+  `password` varchar(10) NOT NULL,
+  `cartegory` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `member`
---
-
-INSERT INTO `member` (`id`, `username`, `email`, `phone`, `region`, `district`, `password`) VALUES
-(1, 'alpha', 'alpha@gmail.com', '1234566787', 'kagera', 'ILALA', '123'),
-(2, 'alex', 'michaelmbutto@gmail.com', '1234566787', 'kagera', 'ILALA', '12');
 
 -- --------------------------------------------------------
 
@@ -140,7 +133,7 @@ ALTER TABLE `fundi`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `request`

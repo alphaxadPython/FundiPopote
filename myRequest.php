@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,12 +91,11 @@
     <main id="main">
 
             <?php 
+                  include "connection.php";
 
-                $id = $_GET['id'];
+                  $username = $_SESSION['username'];
 
-                include "connection.php";
-
-                $sql = "SELECT * FROM fundi JOIN member ON fundi.id = member.id WHERE fundi.id ='$id'";
+                $sql = "SELECT * FROM member JOIN request ON member.username = request.username WHERE request.username = '$username'";
                 $check = mysqli_query($conn, $sql);
 
                 while($row = mysqli_fetch_assoc($check)){
@@ -106,7 +106,7 @@
                     
                     <div class="row">
 
-                        <div class="card m-auto" style="max-width: 550px" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card m-auto" style="max-width: 600px" data-aos="fade-up" data-aos-delay="200">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -131,7 +131,7 @@
                                         <div class="row">
                                                 
                                                 <div class="col-6 m-auto">
-                                                    <a href="myRequest.php?id=<?php echo $row['id']; ?>" class="btn btn-danger w-75">Sitisha</a>
+                                                    <a href="deleteRequest.php?id=<?php echo $row['id']; ?>" class="btn btn-danger w-75">Sitisha</a>
                                                 </div>
                                         </div>
                                     </div>

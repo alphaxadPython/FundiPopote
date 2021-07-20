@@ -99,10 +99,10 @@
                                         
                                     }else{
 
-                                        $sql = "INSERT INTO `fundi`(`username`, `payMean`, `accNo`, `receipt`, `cartegory`, `img`) VALUES ('$username','$payment','$account','$receipt','$cartegory','assets/img/avatar.png')";
+                                        $sql = "INSERT INTO `fundi`(`username`, `payMean`, `accNo`, `receipt`, `cartegory`) VALUES ('$username','$payment','$account','$receipt','$cartegory')";
                                         mysqli_query($conn, $sql);
 
-                                        $sql2 = "INSERT INTO `member`(`username`, `email`, `phone`, `region`, `district`, `password`, `cartegory`) VALUES ('$username','$email','$phone','$region','$district','$pass1','$cartegory')";
+                                        $sql2 = "INSERT INTO `member`(`username`, `email`, `phone`, `region`, `district`, `password`, `cartegory`, `img`) VALUES ('$username','$email','$phone','$region','$district','$pass1','$cartegory','assets/img/avatar.png')";
                                         mysqli_query($conn, $sql2);
 
                                             $_SESSION['username'] = $username;
@@ -126,6 +126,7 @@
                                             <option disabled>Aina ya Fundi</option>
                                             <option value="Bomba">Fundi Bomba</option>
                                             <option value="Gari">Fundi Gari</option>
+                                            <option value="Rangi">Fundi Rangi</option>
                                             <option value="PikiPiki">Fundi Pikipiki</option>
                                             <option value="Ujenzi">Fundi Ujenzi</option>
                                             <option value="Umeme">Fundi Umeme</option>

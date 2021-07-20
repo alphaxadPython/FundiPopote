@@ -82,7 +82,7 @@
 
             include "connection.php";
 
-            $sql = "SELECT * FROM fundi JOIN member ON fundi.id = member.id WHERE fundi.id ='$id'";
+            $sql = "SELECT * FROM member WHERE id ='$id'";
             $check = mysqli_query($conn, $sql);
 
             while($row = mysqli_fetch_assoc($check)){
@@ -121,12 +121,12 @@
                                     <span>Ratings:</span><br>
                                     <span class="text-muted"><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning" ></i><i class="fas fa-star-half-alt text-warning"></i><i class="fas fa-star-half text-warning" ></i></span> <br>
                                     <div class="row">
-                                            <div class="col-6">
-                                                <a href="chat.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Message</a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a href="myRequest.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-success">Ita Fundi</a>
-                                            </div>
+                                        <div class="col-6">
+                                            <a href="chat.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Message</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="makeRequest.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-success">Ita Fundi</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -143,8 +143,6 @@
     </main>
     <!-- End #main -->
 
-
-    <!-- {% comment %} <div id="preloader"></div> {% endcomment %} -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">

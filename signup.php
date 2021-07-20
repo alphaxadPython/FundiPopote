@@ -96,7 +96,7 @@
                                         <?php
                                             
                                         }else{
-                                            $sql = "INSERT INTO `member`(`username`, `email`, `phone`, `region`, `district`, `password`,`cartegory`) VALUES ('$username','$email','$phone','$region','$district','$password1','member')";
+                                            $sql = "INSERT INTO `member`(`username`, `email`, `phone`, `region`, `district`, `password`,`cartegory`,`img`) VALUES ('$username','$email','$phone','$region','$district','$password1','member','assets/img/avatar.png')";
                                             mysqli_query($conn, $sql);
 
                                             $_SESSION['username'] = $username;

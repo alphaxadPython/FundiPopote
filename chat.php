@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,10 +76,11 @@
 
             include('connection.php');
 
-            $sql = "SELECT * FROM fundi JOIN member ON member.id = fundi.id where fundi.id ='$id'";
+            $sql = "SELECT * FROM member WHERE id ='$id'";
             $check = mysqli_query($conn, $sql);
 
             while($row = mysqli_fetch_assoc($check)){
+                $_SESSION['reciver'] = $row['username'];
 
         ?>
                 <section id="team" class="team section-bg">
@@ -95,21 +97,38 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="<?php echo ucwords($row['img']); ?>" style="height: 250px;" class="img-fluid" alt="" />
+                                            <img src="<?php echo $row['img']?>" style="height: 250px;" class="img-fluid" alt="" />
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mesgs">
                                                 <div class="msg_history">
+                                            <hr>
+
                 
+                                                <?php
+
+                                                    include "connection.php";
+                                                    $user = $_SESSION['username'];
+                                                    $recv = $_SESSION['reciver'];
+
+                                                    $sql = "SELECT * FROM chat WHERE sender ='$user' AND reciver ='$recv'";
+                                                    $check = mysqli_query($conn, $sql);
+
+                                                    while($row = mysqli_fetch_assoc($check)){
+                                                        
+                                                    ?>
                                                     <div class="outgoing_msg">
                 
                                                         <div class="sent_msg">
-                                                            <p>Oi mdau njoo basi nina .. li tatizo hilooo
+                                                            <p><?php echo $row['msg'] ?>
                                                             </p>
-                                                            <small class="time_date"> 11:01 AM    |    June 9</small> </div>
+                                                            <small class="time_date"> <?php echo $row['time'] ?></small> 
+                                                        </div>
                                                     </div>
+                                                    <?php } ?>
+
                                                     <div class="incoming_msg">
-                                                        <div class="incoming_msg_img"> <img src="assets/img/team/phone2.jpg" style="border-radius: 50%; width: 100%; width: 30px; height: 30px;" alt="picha"> </div>
+                                                        <div class="incoming_msg_img"> <img src="<?php echo $row['img']?>" style="border-radius: 50%; width: 100%; width: 30px; height: 30px;" > </div>
                                                         <div class="received_msg">
                                                             <div class="received_withd_msg">
                                                                 <p>Acha mambo yako ...pambana!!
@@ -120,8 +139,10 @@
                                                 </div>
                                                 <div class="type_msg">
                                                     <div class="input_msg_write">
-                                                        <input type="text" class="form-control text-primary" placeholder="Type a message" />
-                                                        <button class="msg_send_btn" type="button"><i class="fab fa-telegram" ></i></button>
+                                                       <form action="" method="post">
+                                                          <input type="text" name="text" class="form-control text-primary" placeholder="Type a message" />
+                                                             <button class="msg_send_btn" type="submit" name="chat"><i class="fab fa-telegram" ></i></button>
+                                                       </form>
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,7 +156,22 @@
                 </section>
         <?php } ?>
         <!-- End Team Section -->
+        <?php
+            include "connection.php";
 
+            $username = $_SESSION['username'];
+            $recive = $_SESSION['reciver'];
+
+
+
+            if(isset($_POST['chat'])){
+                $msg = mysqli_real_escape_string($conn, $_POST['text']);
+
+                $sql = "INSERT INTO `chat`(`sender`, `reciver`, `msg`) VALUES ('$username','$recive','$msg')";
+                mysqli_query($conn, $sql);
+
+            }
+        ?>
     </main>
     <!-- End #main -->
 

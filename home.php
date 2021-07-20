@@ -448,7 +448,6 @@
     <!-- End #main -->
 
 
-    <!-- {% comment %} <div id="preloader"></div> {% endcomment %} -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
