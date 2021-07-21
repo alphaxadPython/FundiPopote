@@ -43,11 +43,18 @@
                     <li class="dropdown">
                         <a href="#" class="active"><span><i class="fa fa-user-md" aria-hidden="true"></i> Mafundi</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="mafundiCartegory.php">Fundi Bomba</a></li>
-                            <li><a href="#">Fundi Gari</a></li>
-                            <li><a href="#">Fundi Umeme</a></li>
-                            <li><a href="#">Fundi Simu</a></li>
-                            <li><a href="#">Fundi Funguo</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Bomba";?>">Fundi Bomba</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Gari";?>">Fundi Gari</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Umeme";?>">Fundi Umeme</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Simu";?>">Fundi Simu</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Funguo";?>">Fundi Funguo</a></li>
+                            <!-- at small devices -->
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Dish";?>">Fundi Dish</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Nguo";?>">Fundi Nguo</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Ujenzi";?>">Fundi Ujenzi</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Taa";?>">Fundi Taa</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Camera";?>">Fundi Camera</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Computer";?>">Fundi Computer</a></li>
                             <li><a href="cartegory.php">Tazama Wote</a></li>
 
                         </ul>
@@ -57,13 +64,12 @@
                         <ul>
                             <li><a class="nav-link scrollto" href="myRequest.php">Maombi</a></li>
                             <li><a href="#">Messages</a></li>
-                            <li><a href="#">Notification</a></li>
                             <li><a href="#">Badili Taarifa</a></li>
 
                         </ul>
                     </li>
                     <li>
-                        <a class="getstarted scrollto" href="index.php">Logout</a>
+                        <a class="getstarted scrollto" href="index.php?id=1">Logout</a>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>

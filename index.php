@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    if(isset($_GET['id'])){
+        session_destroy();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

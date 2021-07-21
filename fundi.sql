@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2021 at 04:19 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Jul 21, 2021 at 04:39 PM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +33,7 @@ CREATE TABLE `chat` (
   `sender` varchar(20) NOT NULL,
   `reciver` varchar(20) NOT NULL,
   `msg` text NOT NULL,
-  `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,27 +42,7 @@ CREATE TABLE `chat` (
 --
 
 INSERT INTO `chat` (`id`, `sender`, `reciver`, `msg`, `time`, `status`) VALUES
-(1, 'alpha', 'alpha', 'hellow boys', '2021-07-20 07:07:33', NULL),
-(2, 'alpha', 'alpha', 'hellow boys', '2021-07-20 07:11:30', NULL),
-(3, 'alpha', 'alpha', 'vp hukooo', '2021-07-20 07:11:43', NULL),
-(4, 'alpha', 'alpha', 'leta mpya boss', '2021-07-20 07:12:23', NULL),
-(5, 'alpha', 'alpha', 'leta mpya boss', '2021-07-20 07:13:18', NULL),
-(6, 'alpha', 'alpha', 'inakuaje mkuu', '2021-07-20 07:13:37', NULL),
-(7, 'alpha', 'alpha', 'nakuja hapoo', '2021-07-20 07:14:07', NULL),
-(8, 'alpha', 'alpha', 'duhh', '2021-07-20 07:14:27', NULL),
-(9, 'alpha', 'alpha', 'duhh', '2021-07-20 07:16:03', NULL),
-(10, 'alpha', 'alpha', 'alpha joee', '2021-07-20 07:20:58', NULL),
-(11, 'alpha', 'alpha', 'alpha joee', '2021-07-20 07:21:09', NULL),
-(12, 'alpha', 'alpha', 'alpha joee', '2021-07-20 07:22:21', NULL),
-(13, 'alpha', 'alpha', 'alpha joee', '2021-07-20 07:29:10', NULL),
-(14, 'Khan Musa', 'alpha', 'broo vip', '2021-07-20 07:38:50', NULL),
-(15, 'Khan Musa', 'alpha', 'utakuja', '2021-07-20 07:38:57', NULL),
-(16, 'Khan Musa', 'alpha', 'utakuja', '2021-07-20 07:39:29', NULL),
-(17, 'Khan Musa', 'alpha', 'utakuja', '2021-07-20 07:39:34', NULL),
-(18, 'Dangua Danse', 'Dangua Danse', 'hello', '2021-07-20 17:45:48', NULL),
-(19, 'Dangua Danse', 'Dangua Danse', 'njoo', '2021-07-20 17:46:00', NULL),
-(20, 'James maro', 'Nuru Khan', 'fundi Nuru mambo', '2021-07-21 02:05:29', NULL),
-(21, 'James maro', 'Nuru Khan', 'fundi Nuru mambo', '2021-07-21 02:05:40', NULL);
+(1, 'Hamis', 'Johnson Uma', 'oi john nina shida', '2021-07-21 14:25:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -243,7 +224,11 @@ INSERT INTO `fundi` (`id`, `username`, `payMean`, `accNo`, `receipt`, `cartegory
 (158, 'james matank', 'CRDB', 'wqewqe', 'dsadsad', 'Tank'),
 (159, 'Biseko Tanks', 'PayPal', 'dfdsfd', 'dsdfdsf', 'Tank'),
 (160, 'Tanki Bovu', 'CRDB', 'asdsad', 'wewqe', 'Tank'),
-(161, 'Mapasi keko', 'Visa', 'sdsad', 'werrwr', 'Pasi');
+(161, 'Mapasi keko', 'Visa', 'sdsad', 'werrwr', 'Pasi'),
+(162, 'Alpha Jozee', 'NMB', 'ACDF323223', 'BHGTY2342', 'Computer'),
+(163, 'Philemon Philbert', 'Visa', 'BGHT323432', 'BHGT3423423', 'Gari'),
+(164, 'Ramadan Bakari', 'NBC', 'GHYR2332432', 'sdfdsfds2432', 'Rangi'),
+(165, 'Nyakasala Wise', 'PayPal', 'GHYT34324', 'dfsdfd', 'Gari');
 
 -- --------------------------------------------------------
 
@@ -431,7 +416,12 @@ INSERT INTO `member` (`id`, `username`, `email`, `phone`, `region`, `district`, 
 (161, 'Biseko Tanks', 'tank@gmail.com', '5432543', 'Moshi', 'dengua', '123', 'Tank', 'assets/img/avatar.png'),
 (162, 'Tanki Bovu', 'tankki@gmail.com', '434324', 'Dar', 'goba', '123', 'Tank', 'assets/img/avatar.png'),
 (163, 'Mapasi keko', 'mapasi@gmail.com', '34343', 'dar', 'Fire', '123', 'Pasi', 'assets/img/avatar.png'),
-(164, 'James maro', 'james@gmail.com', '0987654321', 'Musoma', 'mafinga', '123', 'member', 'assets/img/avatar.png');
+(164, 'James maro', 'james@gmail.com', '0987654321', 'Musoma', 'mafinga', '123', 'member', 'assets/img/avatar.png'),
+(165, 'Alpha Jozee', 'alph@gmail', '0987654321', 'kigamboni', 'ferry', '123', 'Computer', 'assets/img/team/phone2.jpg'),
+(166, 'Philemon Philbert', 'philb@gmail.com', '987654321', 'kigamboni', 'midizin', '123', 'Gari', 'assets/img/team/fundi3.jpg'),
+(167, 'Ramadan Bakari', 'beka@gmail.com', '22558783', 'kigamboni', 'ferry', '123', 'Rangi', 'assets/img/coo.jpg'),
+(168, 'Nyakasala Wise', 'wise@gmail.com', '342343243', 'kigamboni', 'darajani', '123', 'Gari', 'assets/img/team/fundi1.jpg'),
+(169, 'Hamis', 'hamis@gmail.com', '5345345345', 'Mwanza', 'nyamagana', '123', 'member', 'assets/img/avatar.png');
 
 -- --------------------------------------------------------
 
@@ -454,8 +444,9 @@ CREATE TABLE `request` (
 --
 
 INSERT INTO `request` (`id`, `username`, `phone`, `fundi`, `cartegory`, `location`, `ratings`) VALUES
-(3, 'James maro', '4343123', 'James Muro', 'Bomba', 'Mara', 3),
-(4, 'James maro', '32123', 'Dunga Bana', 'Rangi', 'simiyu', 3);
+(1, 'alpha', '232312', 'Johnson Uma', 'Umeme', 'Singida', 3),
+(2, 'Hamis', '232312', 'Johnson Uma', 'Umeme', 'Singida', 3),
+(3, 'Hamis', '34214324', 'kakulu Boy', 'Gari', 'Ruvuma', 3);
 
 --
 -- Indexes for dumped tables
@@ -493,25 +484,25 @@ ALTER TABLE `request`
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `fundi`
 --
 ALTER TABLE `fundi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

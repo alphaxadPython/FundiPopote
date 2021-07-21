@@ -1,10 +1,9 @@
 <?php
+    include "connection.php";
 
     session_start();
 
     $id = $_GET['id'];
-
-    include "connection.php";
 
     $sql = "SELECT * FROM member WHERE id ='$id'";
     $check = mysqli_query($conn, $sql);

@@ -39,32 +39,38 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="home.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a class="nav-link scrollto " href="home.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a class="nav-link scrollto" href="cartegory.php"><i class="fa fa-cog" aria-hidden="true"></i> Huduma</a></li>
                     <li class="dropdown">
                         <a href="#"><span><i class="fa fa-user-md" aria-hidden="true"></i> Mafundi</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="mafundiCartegory.php">Fundi Bomba</a></li>
-                            <li><a href="#">Fundi Gari</a></li>
-                            <li><a href="#">Fundi Umeme</a></li>
-                            <li><a href="#">Fundi Simu</a></li>
-                            <li><a href="#">Fundi Funguo</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Bomba";?>">Fundi Bomba</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Gari";?>">Fundi Gari</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Umeme";?>">Fundi Umeme</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Simu";?>">Fundi Simu</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Funguo";?>">Fundi Funguo</a></li>
+                            <!-- at small devices -->
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Dish";?>">Fundi Dish</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Nguo";?>">Fundi Nguo</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Ujenzi";?>">Fundi Ujenzi</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Taa";?>">Fundi Taa</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Camera";?>">Fundi Camera</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Computer";?>">Fundi Computer</a></li>
                             <li><a href="cartegory.php">Tazama Wote</a></li>
 
                         </ul>
                     </li>
                      <li class="dropdown">
-                        <a href="#" class=" active"><span><i class="fa fa-lock" aria-hidden="true"></i> Account</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="#" class="active"><span><i class="fa fa-lock" aria-hidden="true"></i> Account</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a class="nav-link scrollto active" href="myRequest.php">Maombi</a></li>
+                            <li><a class="nav-link scrollto" href="myRequest.php">Maombi</a></li>
                             <li><a href="#">Messages</a></li>
-                            <li><a href="#">Notification</a></li>
                             <li><a href="#">Badili Taarifa</a></li>
 
                         </ul>
                     </li>
                     <li>
-                        <a class="getstarted scrollto" href="index.php">Logout</a>
+                        <a class="getstarted scrollto" href="index.php?id=1">Logout</a>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -113,10 +119,14 @@
                                         <img src="<?php echo ucwords($row['img']); ?>" style="height: 225px;" class="img-fluid" alt="" />
                                     </div>
                                     <div class="col-md-6">
+                                        <h4 class="text-center" style="color: #16507b"><?php echo ucwords($row['fundi']); ?></h4>
+
                                         <div class="row mt-3">
+
                                             <div class="col-6">
-                                                <span>Taaluma:</span><br>
-                                                <span class="text-muted"><i class="fas fa-hand-point-right" ></i> Fundi <?php echo ucwords($row['cartegory']); ?></span> <br>
+                                                <span>Ratings:</span><br>
+                                                <span class="text-muted"><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning" ></i><i class="fas fa-star-half-alt text-warning"></i><i class="fas fa-star-half text-warning" ></i></span> <br>
+                                        
                                             </div>
                                             <div class="col-6">
                                                 <span>Location:</span><br>
@@ -124,10 +134,10 @@
                                             
                                             </div>
                                         </div>
-                                        <span>Email:</span><br>
-                                        <span class="text-muted"><i class="fas fa-hand-point-right" ></i> <?php echo ucwords($row['email']); ?></span> <br>
-                                        <span>Ratings:</span><br>
-                                        <span class="text-muted"><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning" ></i><i class="fas fa-star-half-alt text-warning"></i><i class="fas fa-star-half text-warning" ></i></span> <br>
+                                        <br>
+                                         <span>Taaluma:</span><br>
+                                         <span class="text-muted"><i class="fas fa-hand-point-right" ></i> Fundi <?php echo ucwords($row['cartegory']); ?></span> <br>
+                                          <br>
                                         <div class="row">
                                                 
                                                 <div class="col-6 m-auto">

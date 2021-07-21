@@ -56,11 +56,18 @@
                     <li class="dropdown">
                         <a href="#"><span><i class="fa fa-user-md" aria-hidden="true"></i> Mafundi</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="mafundiCartegory.php">Fundi Bomba</a></li>
-                            <li><a href="#">Fundi Gari</a></li>
-                            <li><a href="#">Fundi Umeme</a></li>
-                            <li><a href="#">Fundi Simu</a></li>
-                            <li><a href="#">Fundi Funguo</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Bomba";?>">Fundi Bomba</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Gari";?>">Fundi Gari</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Umeme";?>">Fundi Umeme</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Simu";?>">Fundi Simu</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Funguo";?>">Fundi Funguo</a></li>
+                            <!-- at small devices -->
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Dish";?>">Fundi Dish</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Nguo";?>">Fundi Nguo</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Ujenzi";?>">Fundi Ujenzi</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Taa";?>">Fundi Taa</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Camera";?>">Fundi Camera</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Computer";?>">Fundi Computer</a></li>
                             <li><a href="cartegory.php">Tazama Wote</a></li>
 
                         </ul>
@@ -70,13 +77,12 @@
                         <ul>
                             <li><a class="nav-link scrollto" href="myRequest.php">Maombi</a></li>
                             <li><a href="#">Messages</a></li>
-                            <li><a href="#">Notification</a></li>
                             <li><a href="#">Badili Taarifa</a></li>
 
                         </ul>
                     </li>
                     <li>
-                        <a class="getstarted scrollto" href="index.php">Logout</a>
+                        <a class="getstarted scrollto" href="index.php?id=1">Logout</a>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -259,9 +265,9 @@
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Eneo Ulilopo</h2>
+                    <h2>Eneo Uliopo</h2>
                     <p>
-                        Raman chini hapo inaonyesha eneo ulilopo hivi sasa ... na itakusaidia kupata mafundi wa aina yeyote waliopo karibu yako popote pale utakapo kwenda!!
+                        Raman chini hapo inaonyesha eneo uliopo hivi sasa ... na itakusaidia kupata mafundi wa aina yeyote waliopo karibu yako popote pale utakapo kwenda!!
                     </p>
                 </div>
 
@@ -279,7 +285,6 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Mafundi Eneo Lako:</h2>
-
                 </div>
 
                 <div class="row">
@@ -288,14 +293,13 @@
                             <div class="member-img">
                                 <img src="assets/img/team/phone2.jpg" style="height: 240px;" class="img-fluid" alt="" />
                                 <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
-                                   
+                                    <a href="fundiCard.php?id=165"><i class="fas fa-id-card"></i> Taarifa</a>
 
                                 </div>
                             </div>
                             <div class="member-info">
                                 <h4>Alpha Jozee</h4>
-                                <span>Fundi Simu - Kigambooni</span>
+                                <span>Fundi Computer - Kigambooni</span>
                             </div>
                         </div>
                     </div>
@@ -305,13 +309,13 @@
                             <div class="member-img">
                                 <img src="assets/img/team/fundi3.jpg" style="height: 240px;" class="img-fluid" alt="" />
                                 <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
+                                    <a href="fundiCard.php?id=166"><i class="fas fa-id-card"></i> Taarifa</a>
                                    
 
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h4>Philbert MwakaTina</h4>
+                                <h4>Philemon Philbert</h4>
                                 <span>Fundi Gari - Kigambooni</span>
                             </div>
                         </div>
@@ -320,16 +324,16 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
                             <div class="member-img">
-                                <img src="assets/img/team/mom.jpg" style="height: 240px;" class="img-fluid" alt="" />
+                                <img src="assets/img/coo.jpg" style="height: 240px;" class="img-fluid" alt="" />
                                 <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
+                                    <a href="fundiCard.php?id=167 "><i class="fas fa-id-card"></i> Taarifa</a>
                                    
 
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h4>Ramadan Juma</h4>
-                                <span>Fundi Mitambo - Kigambooni</span>
+                                <h4>Ramadan Bakari</h4>
+                                <span>Fundi Rangi - Kigambooni</span>
                             </div>
                         </div>
                     </div>
@@ -339,14 +343,14 @@
                             <div class="member-img">
                                 <img src="assets/img/team/fundi1.jpg" style="height: 240px;" class="img-fluid" alt="" />
                                 <div class="social">
-                                    <a href="fundiCard.php"><i class="fas fa-id-card"></i> Taarifa</a>
+                                    <a href="fundiCard.php?id=168"><i class="fas fa-id-card"></i> Taarifa</a>
                                    
 
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h4>Waizman Wise</h4>
-                                <span>Fundi Engine - Kigambooni</span>
+                                <h4>Nyakasala Wise</h4>
+                                <span>Fundi Gari - Kigambooni</span>
                             </div>
                         </div>
                     </div>

@@ -41,24 +41,38 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="home.php">Home</a></li>
-                    <li><a class="nav-link scrollto" href="cartegory.php">Huduma</a></li>
+                    <li><a class="nav-link scrollto " href="home.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a class="nav-link scrollto" href="cartegory.php"><i class="fa fa-cog" aria-hidden="true"></i> Huduma</a></li>
                     <li class="dropdown">
-                        <a href="#"><span>Mafundi</span> <i class="bi bi-chevron-down"></i
-              ></a>
+                        <a href="#"><span><i class="fa fa-user-md" aria-hidden="true"></i> Mafundi</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="mafundiCartegory.php">Fundi Bomba</a></li>
-                            <li><a href="#">Fundi Gari</a></li>
-                            <li><a href="#">Fundi Umeme</a></li>
-                            <li><a href="#">Fundi Simu</a></li>
-                            <li><a href="#">Fundi Funguo</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Bomba";?>">Fundi Bomba</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Gari";?>">Fundi Gari</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Umeme";?>">Fundi Umeme</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Simu";?>">Fundi Simu</a></li>
+                            <li><a href="mafundiCartegory.php?cartegory=<?php echo"Funguo";?>">Fundi Funguo</a></li>
+                            <!-- at small devices -->
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Dish";?>">Fundi Dish</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Nguo";?>">Fundi Nguo</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Ujenzi";?>">Fundi Ujenzi</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Taa";?>">Fundi Taa</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Camera";?>">Fundi Camera</a></li>
+                            <li><a class="d-md-none" href="mafundiCartegory.php?cartegory=<?php echo"Computer";?>">Fundi Computer</a></li>
                             <li><a href="cartegory.php">Tazama Wote</a></li>
 
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="myRequest.php">Maombi</a></li>
+                     <li class="dropdown">
+                        <a href="#"><span><i class="fa fa-lock" aria-hidden="true"></i> Account</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a class="nav-link scrollto" href="myRequest.php">Maombi</a></li>
+                            <li><a href="#">Messages</a></li>
+                            <li><a href="#">Badili Taarifa</a></li>
+
+                        </ul>
+                    </li>
                     <li>
-                        <a class="getstarted scrollto" href="index.php">Logout</a>
+                        <a class="getstarted scrollto" href="index.php?id=1">Logout</a>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -73,6 +87,7 @@
          <?php 
 
             $id = $_GET['id'];
+            $_SESSION['chatid'] = $_GET['id'];
 
             include('connection.php');
 
@@ -127,15 +142,6 @@
                                                     </div>
                                                     <?php } ?>
 
-                                                    <div class="incoming_msg">
-                                                        <div class="incoming_msg_img"> <img src="<?php echo $row['img']?>" style="border-radius: 50%; width: 100%; width: 30px; height: 30px;" > </div>
-                                                        <div class="received_msg">
-                                                            <div class="received_withd_msg">
-                                                                <p>Acha mambo yako ...pambana!!
-                                                                </p>
-                                                                <small class="time_date"> 11:01 AM    |    June 9</small></div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="type_msg">
                                                     <div class="input_msg_write">
@@ -150,7 +156,6 @@
                                     </div>
                                 </div>
                             </div>
-        
                         </div>
                     </div>
                 </section>
@@ -162,13 +167,19 @@
             $username = $_SESSION['username'];
             $recive = $_SESSION['reciver'];
 
-
+            $chatID = $_SESSION['chatid'];
 
             if(isset($_POST['chat'])){
                 $msg = mysqli_real_escape_string($conn, $_POST['text']);
 
                 $sql = "INSERT INTO `chat`(`sender`, `reciver`, `msg`) VALUES ('$username','$recive','$msg')";
                 mysqli_query($conn, $sql);
+
+                echo "
+                    <script>
+                        window.location = 'chat.php?id=$chatID';
+                    </script>
+                ";
 
             }
         ?>
