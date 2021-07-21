@@ -1018,7 +1018,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                    <a href="mafundiCartegory.php?cartegory=<?php echo"Elevator";?>">
+                    <a href="mafundiCartegory.php?cartegory=<?php echo"Eleveta";?>">
                         <div class="icon-box iconbox-yellow">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -1031,7 +1031,7 @@
                                 </svg>
                                 <i class="fas fa-sort" ></i>
                             </div>
-                            <h4><a href="mafundiCartegory.php?cartegory=<?php echo"Elevator";?>">Fundi Elevator</a></h4>
+                            <h4><a href="mafundiCartegory.php?cartegory=<?php echo"Elevata";?>">Fundi Elevator</a></h4>
                             <p>
                                 Tunao mafundi Elevetor wenye uzoefu na kazi... kwa gharama ndogo kabisa
                             </p>

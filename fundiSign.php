@@ -130,6 +130,7 @@
                                             <option value="PikiPiki">Fundi Pikipiki</option>
                                             <option value="Ujenzi">Fundi Ujenzi</option>
                                             <option value="Umeme">Fundi Umeme</option>
+                                            <option value="Radio">Fundi Radio</option>
                                             <option value="Pasi">Fundi Pasi</option>
                                             <option value="TV">Fundi TV</option>
                                             <option value="Simu">Fundi Simu</option>
@@ -137,7 +138,7 @@
                                             <option value="Dish">Fundi Dish</option>
                                             <option value="Nguo">Fundi Nguo</option>
                                             <option value="Friji">Fundi Friji</option>
-                                            <option value="Funguo">Fundi Funguoi</option>
+                                            <option value="Funguo">Fundi Funguo</option>
                                             <option value="Camera">Fundi Camera</option>
                                             <option value="Battery">Fundi Battery</option>
                                             <option value="Welding">Fundi welding</option>
